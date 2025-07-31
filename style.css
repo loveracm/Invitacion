@@ -1,0 +1,267 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #f7f0e6;
+}
+
+#pagina-1 {
+    background-image: url('IMG/Boda1.png');
+}
+
+.boton-fotos {
+    position: absolute;
+    bottom: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #daa520;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+.boton-fotos:hover {
+    background-color: #ae841a;
+}
+
+.icono-fotos {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .boton-fotos {
+        bottom: 10vh;
+        width: 45px;
+        height: 45px;
+    }
+    .icono-fotos {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boton-fotos {
+        bottom: 8vh;
+        width: 40px;
+        height: 40px;
+    }
+    .icono-fotos {
+        padding: 6px;
+    }
+}
+
+/* Estilos para la segunda página (#pagina-2) */
+#pagina-2 {
+    background-image: url('IMG/Boda2.png'); /* Your background image for page 2 */
+    background-color: #f7f0e6;
+}
+
+.contenido-pagina-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: space-around; /* Distribute space between elements */
+    text-align: center;
+    padding: 20px;
+    max-width: 500px; /* Max width for content on large screens */
+    width: 90%; /* Responsive width */
+    height: 85%; /* Adjusted height for better distribution */
+    box-sizing: border-box;
+    color: #4a3e2a;
+}
+
+/* Removed styles for .texto-bendicion, .nombres-padres-grupo, .nombres-padres, and .texto-acercamiento */
+
+.fecha-boda {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    color: #daa520;
+    margin-top: 20vh; /* Adjusted margin-top to position the date higher */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contador-boda {
+    margin-bottom: 25px;
+}
+
+.contador-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #daa520;
+}
+
+.countdown-numeros {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+    color: #4a3e2a;
+    line-height: 1.2;
+}
+
+.countdown-numeros span {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.botones-ubicacion {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between the three buttons */
+    margin-bottom: 30px; /* Space below the location buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.boton-icono-ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #4a3e2a;
+    font-size: 1em;
+    transition: transform 0.2s ease;
+    text-align: center;
+    max-width: 120px; /* Limit button width to help with wrapping */
+}
+
+.boton-icono-ubicacion:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.icono-ubicacion {
+    width: 60px; /* Icon size (adjust as needed) */
+    height: 60px;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+    object-fit: contain;
+}
+
+/* Confirm Button Styles */
+.boton-confirmar {
+    padding: 12px 25px;
+    background-color: #daa520;
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.boton-confirmar:hover {
+    background-color: #ae841a;
+}
+
+@media (max-width: 768px) {
+    .contenido-pagina-2 {
+        padding: 15px;
+        width: 95%;
+        height: 80%;
+    }
+    .fecha-boda {
+        font-size: 1.5em;
+        margin-top: 18vh; /* Adjusted margin-top for medium screens */
+        margin-bottom: 12px;
+    }
+    .contador-titulo {
+        font-size: 1.1em;
+    }
+    .countdown-numeros {
+        font-size: 1.6em;
+    }
+    .countdown-numeros span {
+        min-width: 35px;
+        margin: 0 4px;
+    }
+    .botones-ubicacion {
+        gap: 15px; /* Adjusted gap for 3 buttons */
+        margin-bottom: 20px;
+    }
+    .icono-ubicacion {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .boton-icono-ubicacion p {
+        font-size: 0.85em; /* Reduced font size for long text on medium screens */
+    }
+    .boton-confirmar {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-pagina-2 {
+        padding: 10px;
+        width: 98%;
+        height: 75%;
+    }
+    .fecha-boda {
+        font-size: 1.2em;
+        margin-top: 15vh; /* Adjusted margin-top for small screens */
+        margin-bottom: 8px;
+    }
+    .contador-titulo {
+        font-size: 0.9em;
+    }
+    .countdown-numeros {
+        font-size: 1.3em;
+    }
+    .countdown-numeros span {
+        min-width: 30px;
+        margin: 0 3px;
+    }
+    .botones-ubicacion {
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+        gap: 10px; /* Adjusted gap */
+        margin-bottom: 15px;
+    }
+    .icono-ubicacion {
+        width: 45px;
+        height: 45px;
+        padding: 4px;
+    }
+    .boton-icono-ubicacion p {
+        font-size: 0.75em; /* Further reduced font size for long text on small screens */
+    }
+    .boton-confirmar {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+}
